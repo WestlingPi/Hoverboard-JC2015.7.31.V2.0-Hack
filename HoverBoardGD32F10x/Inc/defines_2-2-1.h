@@ -2,12 +2,12 @@
 #include "../Inc/config.h"
 
 // LED defines
-#define LED_RED GPIO_PIN_3 //JMA ok
-#define LED_RED_PORT GPIOB //JMA ok
+#define LED_GREEN GPIO_PIN_3 //JMA ok
+#define LED_GREEN_PORT GPIOB //JMA ok
 #define LED_ORANGE GPIO_PIN_15 //JMA ok
 #define LED_ORANGE_PORT GPIOA //JMA ok
-#define LED_GREEN GPIO_PIN_12 //JMA ok
-#define LED_GREEN_PORT GPIOA //JMA ok
+#define LED_RED GPIO_PIN_12 //JMA ok
+#define LED_RED_PORT GPIOA //JMA ok
 
 #define UPPER_LED_PIN GPIO_PIN_11		// robo according to "Hoverboard JC2015.7.31.pdf"
 #define UPPER_LED_PORT GPIOA
@@ -48,9 +48,6 @@
 #define HALL_A_PIN GPIO_PIN_1
 #define HALL_B_PIN GPIO_PIN_0
 #define HALL_C_PIN GPIO_PIN_2
-
-
-
 #define HALL_A_PORT GPIOA //was GPIOB
 #define HALL_B_PORT GPIOA //was GPIOF
 #define HALL_C_PORT GPIOA //was GPIOC
