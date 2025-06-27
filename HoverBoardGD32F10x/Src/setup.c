@@ -328,7 +328,7 @@ void PWM_init(void)
 	// Set up the basic parameter struct for the timer
 	timerBldc_paramter_struct.counterdirection 	= TIMER_COUNTER_UP;
 	timerBldc_paramter_struct.prescaler 				= 0;
-	timerBldc_paramter_struct.alignedmode 			= TIMER_COUNTER_CENTER_DOWN;
+	timerBldc_paramter_struct.alignedmode 			= TIMER_COUNTER_CENTER_BOTH;
 	timerBldc_paramter_struct.period						= 72000000 / 2 / PWM_FREQ;
 	timerBldc_paramter_struct.clockdivision 		= TIMER_CKDIV_DIV1;
 	timerBldc_paramter_struct.repetitioncounter = 0;
@@ -494,7 +494,7 @@ void ADC_init(void)
 	// Enable DMA channel 0
 	dma_channel_enable(DMA0, DMA_CH0); //JMA DMA0 added
 	
-	adc_channel_length_config(ADC0, ADC_REGULAR_CHANNEL, 1); //was 2 JMA ADC0 added
+	adc_channel_length_config(ADC0, ADC_REGULAR_CHANNEL, 2); //JW: was 2 changed to 1. was 2 JMA ADC0 added
 	adc_regular_channel_config(ADC0, 0, VBATT_CHANNEL, ADC_SAMPLETIME_13POINT5); //JMA ADC0 added
 	adc_regular_channel_config(ADC0, 1, CURRENT_DC_CHANNEL, ADC_SAMPLETIME_13POINT5); // JW: uncommented! JMA ADC0 added
 	adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT); //JMA ADC0 added
